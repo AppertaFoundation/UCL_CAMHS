@@ -1,0 +1,112 @@
+<style>
+  h2 {
+    text-align: center;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Hope not Harm</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="openShare($shareKey, $filledKey)">
+          Share Page
+        </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <h2>Weighing it up</h2>
+
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <p>
+          Anybody who has used self-harm has done this for a reason... often because of not knowing what else to do to feel better. However, we know that even though it can help, there are also often some things about self-harm that can make people feel worse again.
+        </p>
+        <p>
+          Can you think of some good things, and not so good things about self harm? Try to weight it up!
+        </p>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-40>
+        <ion-card class="rounded">
+          <ion-card-header><b>Good things about self harm</b></ion-card-header>
+          <ion-item>
+            <ion-textarea rows="12" [(ngModel)]="inputData[0]" placeholder="Think about what could be good...\n\n- Write down\n- Some points"></ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col width-40>
+        <ion-card class="rounded">
+          <ion-card-header><b>Bad things about self harm</b></ion-card-header>
+          <ion-item>
+            <ion-textarea rows="12" [(ngModel)]="inputData[1]" placeholder="Think about what might be not so good...\n\n- Write down\n- Some points"></ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <div>
+      <ion-row>
+        <ion-col width-30></ion-col>
+        <ion-col width-40>
+          <img src="assets/img/balance.png" class="img">
+        </ion-col>
+        <ion-col width-30></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-30></ion-col>
+        <ion-col width-40 style="text-align: center;">
+          <p><b>Balance your thoughts</b></p>
+        </ion-col>
+        <ion-col width-30></ion-col>
+      </ion-row>
+    </div>
+
+  </ion-grid>
+
+</ion-content>
+
+
+<ion-footer class="tab_footer">
+  <ion-grid>
+    <ion-row class="button">
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goBack()">
+          <ion-icon name="ios-arrow-back" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+      <!-- Useful contacts shortcut in every page -->
+      <ion-col>
+        <button ion-button clear full icon-only (click)="goContact()">
+          <ion-icon class="info_icon" name="ios-information-outline"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goForward()">
+          <ion-icon name="ios-arrow-forward" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

@@ -1,0 +1,27 @@
+page15 {
+  .tab_footer {
+    background: rgb(14, 139, 243);
+  }
+  .info_icon {
+    color: white;
+  }
+  .vertical-align-content > * {
+    display: flex !important;
+    align-content: center !important;
+    align-items: center !important;
+  }
+  .circle_icons_bigger {
+    width: 50px;
+    height: 50px;
+  }
+  .table1 tr:nth-child(even) {
+    background-color: rgb(243, 249, 255);
+  }
+  .table1 tr:nth-child(odd) {
+    background-color: rgb(176, 227, 255);
+  }
+  .table1 th {
+    background-color: rgb(14, 139, 243);
+    color: white;
+  }
+}

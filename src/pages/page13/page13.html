@@ -1,0 +1,200 @@
+<style>
+  h2 {
+    text-align: center;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Hope not Harm</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="openShare()">
+          Share Page
+        </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>A guide to problem solving - STOP</h2>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card padding>
+          <ion-card-header style="text-align: center;">
+            <b>Remember</b>
+          </ion-card-header>
+          <ion-card-content>
+            Problem solving is useful as when a new or challenging situation arises you can think clearly and decide how you are going to handle it.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <p><u><b>Steps:</b></u></p>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+
+      <ion-col width-15>
+        <img src="assets/img/stop.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-5>
+        <img src="assets/img/right-arrow.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-15>
+        <img src="assets/img/brainstorm.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-5>
+        <img src="assets/img/right-arrow.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-15>
+        <img src="assets/img/thumbs-up.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-5>
+        <img src="assets/img/right-arrow.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-15>
+        <img src="assets/img/decision.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+
+      <ion-col width-15>
+        <b>1: Stop</b>
+      </ion-col>
+      <ion-col width-5>
+      </ion-col>
+      <ion-col width-15>
+        <b>2: Think</b>
+      </ion-col>
+      <ion-col width-5>
+      </ion-col>
+      <ion-col width-15>
+        <b>3: Evaluate</b>
+      </ion-col>
+      <ion-col width-5>
+      </ion-col>
+      <ion-col width-15>
+        <b>4: Act</b>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-10><img src="assets/img/stop.png" class="circle_icons_bigger"></ion-col>
+      <ion-col width-70>
+        <h3><u>1: STOP</u></h3>
+        <p>What is the problem? Ask yourself: who, when, why, where and what.</p>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-40>
+        <ion-card padding class="rounded">
+          <ion-card-header>
+            <b>Who</b>
+          </ion-card-header>
+          <ion-textarea rows="3" [(ngModel)]="inputData[0]" placeholder="Ask yourself who..."></ion-textarea>
+        </ion-card>
+      </ion-col>
+      <ion-col width-40>
+        <ion-card padding class="rounded">
+          <ion-card-header>
+            <b>When</b>
+          </ion-card-header>
+          <ion-textarea rows="3" [(ngModel)]="inputData[1]" placeholder="Ask yourself when..."></ion-textarea>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-40>
+        <ion-card padding class="rounded">
+          <ion-card-header>
+            <b>Why</b>
+          </ion-card-header>
+          <ion-textarea rows="3" [(ngModel)]="inputData[2]" placeholder="Ask yourself why..."></ion-textarea>
+        </ion-card>
+      </ion-col>
+      <ion-col width-40>
+        <ion-card padding class="rounded">
+          <ion-card-header>
+            <b>Where</b>
+          </ion-card-header>
+          <ion-textarea rows="3" [(ngModel)]="inputData[3]" placeholder="Ask yourself where..."></ion-textarea>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card padding class="rounded">
+          <ion-card-header>
+            <b>What</b>
+          </ion-card-header>
+          <ion-textarea rows="3" [(ngModel)]="inputData[4]" placeholder="Ask yourself what..."></ion-textarea>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+
+
+  </ion-grid>
+</ion-content>
+
+
+<ion-footer class="tab_footer">
+  <ion-grid>
+    <ion-row class="button">
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goBack()">
+          <ion-icon name="ios-arrow-back" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+
+      <!-- Useful contacts shortcut in every page -->
+      <ion-col>
+        <button ion-button clear full icon-only (click)="goContact()">
+          <ion-icon class="info_icon" name="ios-information-outline"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goForward()">
+          <ion-icon name="ios-arrow-forward" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

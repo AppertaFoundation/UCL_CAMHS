@@ -1,0 +1,138 @@
+<style>
+  h2 {
+    text-align: center;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Hope not Harm</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="openShare()">
+          Share Page
+        </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>How the brain manages situations and emotions</h2>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <p style="text-align: center;">
+          We have <b>3</b> systems built into our brains which are all designed to look after us in different ways:
+        </p>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="text-align: center;">
+        <img src="assets/img/ringing.png" class="circle_icons">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center;">
+        <p>
+          <i><b>Threat</b> - external or internal
+          <br/>(anger, anxiety, stress)</i>
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row padding>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+
+      <ion-col width-40 style="text-align: center;">
+        <img src="assets/img/decision.png" class="circle_icons">
+      </ion-col>
+
+      <ion-col width-40 style="text-align: center;">
+        <img src="assets/img/hinduist-yoga-position.png" class="circle_icons">
+      </ion-col>
+
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+
+      <ion-col width-40 style="text-align: center;">
+        <p>
+          <i><b>Do something about this RIGHT NOW</b>
+          <br/>(achievement, excited, driven)</i>
+        </p>
+      </ion-col>
+
+      <ion-col width-40 style="text-align: center;">
+        <p>
+          <i><b>Look after yourself (SOOTHE)</b>
+          <br/>(safe, secure, settled)</i>
+        </p>
+      </ion-col>
+
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row padding>
+    </ion-row>
+    <ion-row padding>
+    </ion-row>
+    <ion-row padding>
+    </ion-row>
+
+    <ion-row padding>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card padding style="text-align: center;">
+          <ion-card-header>
+            <b>Go to the next page to discover the systems in depth!</b>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer class="tab_footer">
+  <ion-grid>
+    <ion-row class="button">
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goBack()">
+          <ion-icon name="ios-arrow-back" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+
+      <!-- Useful contacts shortcut in every page -->
+      <ion-col>
+        <button ion-button clear full icon-only (click)="goContact()">
+          <ion-icon class="info_icon" name="ios-information-outline"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goForward()">
+          <ion-icon name="ios-arrow-forward" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

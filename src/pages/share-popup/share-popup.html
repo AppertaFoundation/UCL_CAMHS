@@ -1,0 +1,85 @@
+<!--
+  Generated template for the SharePopup page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="calm_blue">
+    <ion-title>Share Page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="!isFilled && checkSharable()">
+    <p>
+      The page has some incomplete fields. Do you want to send it anyways?
+    </p>
+    <br/>
+    <ion-buttons style="text-align: center;">
+      <button ion-button round (click)="swapIsFilled()" color="green">Yes</button>
+      <button ion-button (click)="closeModal()" round color="supreme_red">No</button>
+    </ion-buttons>
+  </div>
+
+  <div *ngIf="(checkSharable() && isFilled) || confirmationFlag">
+    <p>
+      Enter a valid email adress to send the page and your name to share the feedback.
+    </p>
+    <!-- <ion-item>
+      <ion-label stacked>Name</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item> -->
+    <form [formGroup]="nameForm" novalidate>
+      <ion-item>
+        <ion-label stacked>Name</ion-label>
+        <ion-input #username formControlName="username" [(ngModel)]="feedback_name" type="text" placeholder="Your Name" [class.invalid]="!nameForm.controls.username.valid"></ion-input>
+      </ion-item>
+      <ion-item class="error-message" *ngIf="!nameForm.controls.username.valid">
+        <p>Name too short</p>
+      </ion-item>
+    </form>
+
+    <form [formGroup]="emailForm" novalidate>
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input #email formControlName="email" [(ngModel)]="email_address" type="email" placeholder="email@mail.com" [class.invalid]="!emailForm.controls.email.valid"></ion-input>
+      </ion-item>
+      <ion-item class="error-message" *ngIf="!emailForm.controls.email.valid">
+        <p>Invalid email adress</p>
+      </ion-item>
+    </form>
+    <br/>
+
+    <ion-buttons style="text-align: center;">
+
+      <button *ngIf="emailForm.controls.email.valid && nameForm.controls.username.valid" ion-button icon-left round color="calm_blue" (click)="sendPage()" (click)="closeModal()">
+      <ion-icon name="mail"></ion-icon>
+      Send Page
+    </button>
+    </ion-buttons>
+    <br/>
+    <ion-buttons style="text-align: center;">
+      <button ion-button round color="supreme_red" (click)="closeModal()">Close</button>
+    </ion-buttons>
+  </div>
+
+  <div *ngIf="!checkSharable() && !confirmationFlag">
+    <p>
+      There are no user input fields in this page. Do you want to send this page anyways?
+    </p>
+    <br/>
+    <div>
+      <ion-buttons style="text-align: center;">
+        <button ion-button round (click)="swapConfirmationFlag()" color="green">Yes</button>
+        <button ion-button (click)="closeModal()" round color="supreme_red">No</button>
+      </ion-buttons>
+    </div>
+  </div>
+
+
+
+</ion-content>

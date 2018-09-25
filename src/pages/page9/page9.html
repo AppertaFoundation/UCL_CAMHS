@@ -1,0 +1,140 @@
+<style>
+  h2 {
+    text-align: center;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Hope not Harm</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="openShare()">
+          Share Page
+        </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Warning signs</h2>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        Can you think of any early or late signs that you are becoming stressed or upset, and more likely to use self harm?
+        <p>These may include things like not sleeping, feeling annoyed about everything, or crying a lot. It can be useful to recognise these signs so that you can start to use coping strategies and get some support before you start to feel worse.
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-40>
+        <img src="assets/img/sign.png" class="img">
+      </ion-col>
+      <ion-col width-40>
+        <img src="assets/img/archery.png" class="img">
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-40>
+        <ion-card class="rounded">
+          <ion-card-header style="text-align: center;"><b>Sign</b></ion-card-header>
+          <ion-item>
+            <ion-textarea rows="5" [(ngModel)]="inputData[0]" placeholder="Think about some warning signs..."></ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col width-40>
+        <ion-card class="rounded">
+          <ion-card-header style="text-align: center;"><b>Action</b></ion-card-header>
+          <ion-item>
+            <ion-textarea rows="5" [(ngModel)]="inputData[1]" placeholder="Think about some action you might take..."></ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-40>
+        <ion-card class="rounded">
+          <ion-card-header style="text-align: center;"><b>Sign</b></ion-card-header>
+          <ion-item>
+            <ion-textarea rows="5" [(ngModel)]="inputData[2]" placeholder="Think about some warning signs..."></ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col width-40>
+        <ion-card class="rounded">
+          <ion-card-header style="text-align: center;"><b>Action</b></ion-card-header>
+          <ion-item>
+            <ion-textarea rows="5" [(ngModel)]="inputData[3]" placeholder="Think about some action you might take..."></ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-40>
+        <ion-card class="rounded">
+          <ion-card-header style="text-align: center;"><b>Sign</b></ion-card-header>
+          <ion-item>
+            <ion-textarea rows="5" [(ngModel)]="inputData[4]" placeholder="Think about some warning signs..."></ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col width-40>
+        <ion-card class="rounded">
+          <ion-card-header style="text-align: center;"><b>Action</b></ion-card-header>
+          <ion-item>
+            <ion-textarea rows="5" [(ngModel)]="inputData[5]" placeholder="Think about some action you might take..."></ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
+
+
+
+<ion-footer class="tab_footer">
+  <ion-grid>
+    <ion-row class="button">
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goBack()">
+          <ion-icon name="ios-arrow-back" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+
+      <!-- Useful contacts shortcut in every page -->
+      <ion-col>
+        <button ion-button clear full icon-only (click)="goContact()">
+          <ion-icon class="info_icon" name="ios-information-outline"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goForward()">
+          <ion-icon name="ios-arrow-forward" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

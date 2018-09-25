@@ -1,0 +1,23 @@
+page9 {
+	.tab_footer {
+		background: rgb(14, 139, 243);
+	}
+
+	.info_icon {
+		color: white;
+	}
+
+	.col img {
+		max-height: 25%;
+		max-width: 25%;
+		display: block;
+		margin: auto;
+	}
+
+	.rounded {
+		border-style: solid;
+		border-color: rgb(14, 139, 243),;
+		border-radius: 25px;
+		font-style: normal;
+	}
+}

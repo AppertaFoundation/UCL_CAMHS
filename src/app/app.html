@@ -1,0 +1,29 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Page menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <!-- <ion-list> -->
+    <ion-item-group>
+      <ion-item-divider color="light">Workbook pages</ion-item-divider>
+      <ion-item>
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+        </button>
+      </ion-item>
+      <ion-item-divider color="light">About the team</ion-item-divider>
+      <ion-item>
+        <button menuClose ion-item (click)="openTeam()">The developer team
+        </button>
+      </ion-item>
+    </ion-item-group>
+    <!-- </ion-list> -->
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

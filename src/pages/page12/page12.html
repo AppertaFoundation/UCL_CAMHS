@@ -1,0 +1,151 @@
+<style>
+  h2 {
+    text-align: center;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Hope not Harm</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="openShare()">
+          Share Page
+        </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Other options</h2>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80 style="text-align: center;">
+        <u><b>Less painful options:</b></u><br/>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/cold-ice-cubes.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Holding an ince cube in your hand.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/elastic.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Wearing an elastic band on your wrist and let it snap on your skin.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/shower.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Having a cold shower.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/marker.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Drawing in red pen where you would usually cut.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/pillow.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Punching a pillow or screaming into it.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card padding>
+          <ion-card-header style="text-align: center;">
+            <b>Remember</b>
+          </ion-card-header>
+          <ion-card-content>
+            You may have often been told these ‘less painful’ ideas but REMEMBER how our brain works. If we are hurt in some way, our threat alarm bell will be activated... starting the whole cycle again.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+
+
+</ion-content>
+
+
+
+
+
+<ion-footer class="tab_footer">
+  <ion-grid>
+    <ion-row class="button">
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goBack()">
+          <ion-icon name="ios-arrow-back" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+
+      <!-- Useful contacts shortcut in every page -->
+      <ion-col>
+        <button ion-button clear full icon-only (click)="goContact()">
+          <ion-icon class="info_icon" name="ios-information-outline"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goForward()">
+          <ion-icon name="ios-arrow-forward" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

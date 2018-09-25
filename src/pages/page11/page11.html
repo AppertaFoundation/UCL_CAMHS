@@ -1,0 +1,130 @@
+<style>
+  h2 {
+    text-align: center;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Hope not Harm</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="openShare()">
+          Share Page
+        </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Ways I can be kind to myself</h2>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        These are some things I can do to be kind to myself and look after myself at times when I’m not feeling so good.
+        <br/>Write down some suggestions:
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-60>
+        <ion-card class="rounded">
+          <ion-card-content>
+            <ion-textarea rows="2" [(ngModel)]="inputData[0]"placeholder="Remember it's ok not to feel good sometimes..."></ion-textarea>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-60>
+        <ion-card class="rounded">
+          <ion-card-content>
+            <ion-textarea rows="2" [(ngModel)]="inputData[1]" placeholder="Look on the bright side..."></ion-textarea>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-60>
+        <ion-card class="rounded">
+          <ion-card-content>
+            <ion-textarea rows="3" [(ngModel)]="inputData[2]" placeholder="It's never too late to start over. If you weren't happy with yesterday, try something different today. Don't stay stuck. Do better."></ion-textarea>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-60>
+        <ion-card class="rounded">
+          <ion-card-content>
+            <ion-textarea rows="2" [(ngModel)]="inputData[3]" placeholder="If you can imagine it, you can achieve it; if you can dream it, you can become it."></ion-textarea>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card padding>
+          <ion-card-header style="text-align: center;">
+            <b>Remember</b>
+          </ion-card-header>
+          <ion-card-content>
+            Have a few options, its always useful to have a back up to try if you think something doesn’t work.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+
+
+<ion-footer class="tab_footer">
+  <ion-grid>
+    <ion-row class="button">
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goBack()">
+          <ion-icon name="ios-arrow-back" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+
+      <!-- Useful contacts shortcut in every page -->
+      <ion-col>
+        <button ion-button clear full icon-only (click)="goContact()">
+          <ion-icon class="info_icon" name="ios-information-outline"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goForward()">
+          <ion-icon name="ios-arrow-forward" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

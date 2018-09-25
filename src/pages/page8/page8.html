@@ -1,0 +1,153 @@
+<style>
+  h2 {
+    text-align: center;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Hope not Harm</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="openShare()">
+          Share Page
+        </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h2>Shift your attention</h2>
+  <ion-row>
+    <ion-col width-10></ion-col>
+    <ion-col width-80 style="text-align: center;">
+      <p>
+        Grounding exercise, <b>shift</b> your attention to:
+      </p>
+    </ion-col>
+    <ion-col width-10></ion-col>
+  </ion-row>
+
+  <ion-row padding></ion-row>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col width-40></ion-col>
+      <ion-col width-30>
+        <p><b>5</b> things you can see</p>
+      </ion-col>
+      <ion-col width-10>
+        <img src="assets/img/eye.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-40></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-40></ion-col>
+      <ion-col width-30>
+        <p><b>4</b> things you can hear</p>
+      </ion-col>
+      <ion-col width-10>
+        <img src="assets/img/ear.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-40></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-40></ion-col>
+      <ion-col width-30>
+        <p><b>3</b> things you can touch</p>
+      </ion-col>
+      <ion-col width-10>
+        <img src="assets/img/hold.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-40></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-40></ion-col>
+      <ion-col width-30>
+        <p><b>2</b> things you can smell</p>
+      </ion-col>
+      <ion-col width-10>
+        <img src="assets/img/nose.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-40></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-40></ion-col>
+      <ion-col width-30>
+        <p><b>1</b> thing you can taste</p>
+      </ion-col>
+      <ion-col width-10>
+        <img src="assets/img/teeth.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-40></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card padding>
+          <ion-card-header style="text-align: center;">
+            <b>Remember</b>
+          </ion-card-header>
+          <ion-card-content>
+            It’s ok not to feel ok sometimes. We all have emotions that we find difficult and upsetting. These can take some practice... don’t worry if they don’t work first time! Give them a go again and see what helps.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+
+
+</ion-content>
+
+
+
+<ion-footer class="tab_footer">
+  <ion-grid>
+    <ion-row class="button">
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goBack()">
+          <ion-icon name="ios-arrow-back" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+
+      <!-- Useful contacts shortcut in every page -->
+      <ion-col>
+        <button ion-button clear full icon-only (click)="goContact()">
+          <ion-icon class="info_icon" name="ios-information-outline"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goForward()">
+          <ion-icon name="ios-arrow-forward" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

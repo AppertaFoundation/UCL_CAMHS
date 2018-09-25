@@ -1,0 +1,172 @@
+<style>
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Hope not Harm</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="openShare($shareKey, $filledKey)">
+          Share Page
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Things that are good in my life</h2>
+
+  <ion-grid style="text-align: center;">
+    <ion-row>
+      <ion-col>
+        <img src="assets/img/bowling.png" class="circle_icons">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-20>
+        <img src="assets/img/cat.png" class="circle_icons">
+      </ion-col>
+      <ion-col>
+        <img src="assets/img/dog.png" class="circle_icons">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/gamepad.png" class="circle_icons">
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+      <ion-col>
+        <img src="assets/img/party.png" class="circle_icons">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-20>
+        <img src="assets/img/photo-camera.png" class="circle_icons">
+      </ion-col>
+      <ion-col>
+        <img src="assets/img/televisions.png" class="circle_icons">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <img src="assets/img/books.png" class="circle_icons">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row style="text-align: center;">
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <h3>
+			    Positive quotes
+			    </h3>
+        <ion-card padding>
+          <p>
+            <i>I can choose to let it define me, confine me, refine me, outshine me or <b>I can choose</b> to move on and leave it behind.</i>
+          </p>
+        </ion-card>
+        <ion-card padding>
+          <p>
+            <i>Everything totally depends on <b>our thinking</b> and this thinking decides our future.</i>
+          </p>
+        </ion-card>
+        <ion-card padding>
+          <p>
+            <i><b>No one</b> can make you feel inferior without your consent.</i>
+          </p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3>
+		    		Share your favourite quote
+				</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-40>
+
+        <ion-card padding style="text-align: center;">
+          <p>
+            What’s your favourite quote?
+            <ion-icon name="star" color="gold"></ion-icon>
+          </p>
+        </ion-card>
+      </ion-col>
+      <ion-col width-40>
+        <ion-card padding class="rounded">
+          <ion-textarea rows="4" [(ngModel)]="inputData[0]" placeholder="Write your favourite quote..."></ion-textarea>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+      <!-- <ion-col width-40>text</ion-col> -->
+    </ion-row>
+  </ion-grid>
+
+
+
+
+</ion-content>
+
+
+
+
+
+<ion-footer class="tab_footer">
+  <ion-grid>
+    <ion-row class="button">
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goBack()">
+          <ion-icon name="ios-arrow-back" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+
+      <!-- Useful contacts shortcut in every page -->
+      <ion-col>
+        <button ion-button clear full icon-only (click)="goContact()">
+          <ion-icon class="info_icon" name="ios-information-outline"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goForward()">
+          <ion-icon name="ios-arrow-forward" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

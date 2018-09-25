@@ -1,0 +1,163 @@
+<style>
+  h2 {
+    text-align: center;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Hope not Harm</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="openShare()">
+          Share Page
+        </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Some ideas of other ways of helping myself feel better</h2>
+  <ion-grid>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/chat.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Phone/ talk to someone you feel close to—even a general conversation may help you to feel calmer.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/school-material.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Arts and crafts—spending time making things may help you to feel calmer and give chance to move away from difficult thoughts.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/music.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Listening to happy or comforting music.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/garbage.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Write your thoughts or feelings down—keep them or rip up the paper and throw it away. Throwing them away can help you to remind yourself that you can take control of your thoughts.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/soccer-player-running-with-the-ball.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Going for a walk or try out some other exercise.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/real-estate.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Going to a place where you feel safe.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/video-player.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Watch a film or TV show that you enjoy.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+    <ion-row padding></ion-row>
+
+    <ion-row>
+      <ion-col width-20></ion-col>
+      <ion-col width-10>
+        <img src="assets/img/bath.png" class="circle_icons">
+      </ion-col>
+      <ion-col width-50>
+        Having a relaxing bath or shower.
+      </ion-col>
+      <ion-col width-20></ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
+
+
+
+
+<ion-footer class="tab_footer">
+  <ion-grid>
+    <ion-row class="button">
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goBack()">
+          <ion-icon name="ios-arrow-back" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+
+      <!-- Useful contacts shortcut in every page -->
+      <ion-col>
+        <button ion-button clear full icon-only (click)="goContact()">
+          <ion-icon class="info_icon" name="ios-information-outline"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goForward()">
+          <ion-icon name="ios-arrow-forward" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

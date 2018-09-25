@@ -1,0 +1,69 @@
+<style>
+	h4{
+		text-align: center;
+	}
+</style>
+
+<ion-header>
+  <ion-navbar color="calm_blue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Useful Contacts</ion-title>
+		<ion-buttons end>
+      <button ion-button (click)="openShare()">
+          Share Page
+        </button>
+    </ion-buttons>
+   </ion-navbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+	<ion-row>
+		<ion-col width-10></ion-col>
+		<ion-col width-80>
+			<h4><b>Further contacts</b></h4>
+			<p>
+			 If you would like further information, more help working on your self harming, or to take this work further you can contact: CAMHS - <a>01204 390659</a>
+			</p>
+			<h4><b>Other Contacts</b></h4>
+			<p>
+			 Young minds: <br/><a (click)="openPage('http://www.youngminds.org.uk')">http://www.youngminds.org.uk/</a><br/><br/>
+			 Transgender difficulties: <br/><a (click)="openPage('http://www.mermaidsuk.org.uk')">http://www.mermaidsuk.org.uk/</a><br/><br/>
+			 LG Foundation Manchester: <br/><a (click)="openPage('https://lgbt.foundation')">https://lgbt.foundation/</a><br/><br/>
+			 Anxiety Youth BC website: <br/><a (click)="openPage('http://youth.anxietybc.com')">http://youth.anxietybc.com/</a><br/><br/>
+			 National self-harm network: <br/><a (click)="openPage('http://www.nshn.co.uk')">http://www.nshn.co.uk/</a><br/><br/>
+			 Bereavement: <br/><a (click)="openPage('http://www.winstonswish.org.uk')">http://www.winstonswish.org.uk/</a><br/><br/>
+			 The Hideout: <br/><a (click)="openPage('http://thehideout.org.uk/')">http://thehideout.org.uk/</a><br/><br/>
+			 Childline: <br/><a (click)="openPage('https://www.childline.org.uk/')">https://www.childline.org.uk/</a><br/><br/>
+			 Papyrus: <br/><a (click)="openPage('https://www.papyrus-uk.org/')">https://www.papyrus-uk.org/</a><br/><br/>
+			 Teenshealth: <br/><a (click)="openPage('https://teenshealth.org/en/teens/#catmental-health')">https://teenshealth.org/en/teens/#catmental-health</a><br/><br/>
+			</p>
+		</ion-col>
+		<ion-col width-10></ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col width-10></ion-col>
+		<ion-col width-80>
+			<h4><b>T.A.L.K.</b></h4>
+		</ion-col>
+		<ion-col width-10></ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col width-10></ion-col>
+		<ion-col width-20 style="text-align: center;">
+			<img src="assets/img/speak.png" class="circle_icons">
+		</ion-col>
+		<ion-col width-60>
+				If you are feeling suicidal, please <b>T.A.L.K.</b><br/>
+				<b>T</b>ell someone what you are thinking and how you are feeling.<br/>
+				<b>A</b>sk for their help, or seek help.<br/>
+				<b>L</b>isten to their advice or advice from others.<br/>
+				<b>K</b>now who  to call in a crisis and keep the number with you at all times.<br/>
+		</ion-col>
+		<ion-col width-10></ion-col>
+	</ion-row>
+</ion-grid>
+
+</ion-content>

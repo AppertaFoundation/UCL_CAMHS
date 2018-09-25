@@ -1,0 +1,149 @@
+<style>
+  h2 {
+    text-align: center;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Hope not Harm</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="openShare()">
+          Share Page
+        </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>My coping plan</h2>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-60>
+        <ion-card padding>
+          <ion-card-header style="text-align: center;">
+            <b>Remember</b>
+          </ion-card-header>
+          <ion-card-content style="text-align: center">
+            We all have blips. If you have a blip remind yourself of your coping plan
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card class="rounded" padding=20>
+          <ion-card-header>
+            <strong>Warning signs - I'm starting to become stressed:</strong>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-textarea rows="2" [(ngModel)]="inputData[0]" placeholder="Thoughts"></ion-textarea>
+            </ion-item>
+
+            <ion-item>
+              <ion-textarea rows="2" [(ngModel)]="inputData[1]" placeholder="Feelings"></ion-textarea>
+            </ion-item>
+
+            <ion-item>
+              <ion-textarea rows="2" [(ngModel)]="inputData[2]" placeholder="Behaviours"></ion-textarea>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-60>
+        <ion-card class="rounded" padding=20>
+          <ion-card-header>
+            <strong>Things I can do that help:</strong>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-textarea rows="6" [(ngModel)]="inputData[3]" placeholder="What you can do to help?"></ion-textarea>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-60>
+        <ion-card class="rounded" padding>
+          <ion-card-header>
+            <strong>People who can help me and when they are around?</strong>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-textarea rows="6" [(ngModel)]="inputData[4]" placeholder="What others can do to help?"></ion-textarea>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-60>
+        <ion-card class="rounded" padding>
+          <ion-card-header>
+            <strong>Things I can say to myself:</strong>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-textarea rows="6" [(ngModel)]="inputData[5]" placeholder="What do you want to say to yourself?"></ion-textarea>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer class="tab_footer">
+  <ion-grid>
+    <ion-row class="button">
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goBack()">
+          <ion-icon name="ios-arrow-back" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+
+      <!-- Useful contacts shortcut in every page -->
+      <ion-col>
+        <button ion-button clear full icon-only (click)="goContact()">
+          <ion-icon class="info_icon" name="ios-information-outline"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

@@ -1,0 +1,135 @@
+<style>
+  h2 {
+    text-align: center;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Hope not Harm</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="openShare()">
+          Share Page
+        </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>A guide to problem solving - THINK</h2>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-10><img src="assets/img/brainstorm.png" class="circle_icons_bigger"></ion-col>
+      <ion-col width-70>
+        <h3><u>2: THINK</u></h3>
+        <p>Try to think of as many solutions as you can. Don’t worry about whether they’re good or bad ideas, just brainstorm!</p>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card padding class="rounded">
+          <ion-card-header>
+            <b>Solution 1</b>
+          </ion-card-header>
+          <ion-textarea rows="5" [(ngModel)]="inputData[0]" placeholder="Brainstorm some ideas..."></ion-textarea>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card padding class="rounded">
+          <ion-card-header>
+            <b>Solution 2</b>
+          </ion-card-header>
+          <ion-textarea rows="5" [(ngModel)]="inputData[1]" placeholder="Brainstorm some ideas..."></ion-textarea>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card padding class="rounded">
+          <ion-card-header>
+            <b>Solution 3</b>
+          </ion-card-header>
+          <ion-textarea rows="5" [(ngModel)]="inputData[2]" placeholder="Brainstorm some ideas..."></ion-textarea>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card padding class="rounded">
+          <ion-card-header>
+            <b>Solution 4</b>
+          </ion-card-header>
+          <ion-textarea rows="5" [(ngModel)]="inputData[3]" placeholder="Brainstorm some ideas..."></ion-textarea>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col width-10></ion-col>
+      <ion-col width-80>
+        <ion-card padding class="rounded">
+          <ion-card-header>
+            <b>Solution 5</b>
+          </ion-card-header>
+          <ion-textarea rows="5" [(ngModel)]="inputData[4]" placeholder="Brainstorm some ideas..."></ion-textarea>
+        </ion-card>
+      </ion-col>
+      <ion-col width-10></ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+
+</ion-content>
+
+
+
+<ion-footer class="tab_footer">
+  <ion-grid>
+    <ion-row class="button">
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goBack()">
+          <ion-icon name="ios-arrow-back" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+
+      <!-- Useful contacts shortcut in every page -->
+      <ion-col>
+        <button ion-button clear full icon-only (click)="goContact()">
+          <ion-icon class="info_icon" name="ios-information-outline"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button round color="white" icon-only (click)="goForward()">
+          <ion-icon name="ios-arrow-forward" color="calm_blue"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
